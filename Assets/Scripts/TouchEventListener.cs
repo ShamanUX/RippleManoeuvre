@@ -25,7 +25,8 @@ public class TouchEventListener : MonoBehaviour
             Vector3 Worldpos = Camera.main.ScreenToWorldPoint(mousePos);
             Debug.Log(Worldpos);
             GameObject newRipple = GameObject.Instantiate(ripple);
-            newRipple.transform.position = Worldpos;
+            newRipple.transform.position = new Vector3(Worldpos.x, Worldpos.y, 0);
+
 
         }
     }

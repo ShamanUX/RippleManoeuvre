@@ -6,7 +6,7 @@ public class EnlargeAndFade : MonoBehaviour
 {
 
     public float scaleModifier = 0.5f;
-    public float rippleAliveTime = 1f;
+    public float rippleLifetime = 1f;
     private float elapsedTime = 0f;
 
 
@@ -21,8 +21,9 @@ public class EnlargeAndFade : MonoBehaviour
     {
         FadeOut();
         elapsedTime += Time.deltaTime;
-        if (elapsedTime <= rippleAliveTime)
+        if (elapsedTime <= rippleLifetime)
         {
+            Debug.Log("enlarge, ripple lifetime: " + rippleLifetime);
             EnlargeRipple();
         }
         else
@@ -36,7 +37,7 @@ public class EnlargeAndFade : MonoBehaviour
     {
         Material material = transform.Find("ForceSphere").GetComponent<MeshRenderer>().material;
         Color lastColor = material.GetColor("_BaseColor");
-        float alpha = Mathf.Lerp(1, 0, elapsedTime / rippleAliveTime);
+        float alpha = Mathf.Lerp(1, 0, elapsedTime / rippleLifetime);
 
         material.SetColor("_BaseColor", new Color(lastColor.r, lastColor.g, lastColor.b, alpha));
 

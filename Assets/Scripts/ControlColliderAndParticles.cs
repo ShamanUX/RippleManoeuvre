@@ -13,8 +13,15 @@ public class ControlColliderAndParticles : MonoBehaviour
 
     private bool beginShrinkEffectiveRadius = false;
     private bool isDestroying = false;
+    public float minLifeTime = 1f;
+    public float maxLifeTime = 2f;
+    public float minScale = 3f;
+    public float maxScale = 8f;
+    public float minRadius = 0.5f;
+    public float maxRadius = 2f;
 
     public void BeginShrinkEffectiveRadius()
+
     {
         beginShrinkEffectiveRadius = true;
     }
@@ -27,7 +34,7 @@ public class ControlColliderAndParticles : MonoBehaviour
         ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
         var main = ps.main;
         main.startSpeed = rippleScaleModifier / scaleToSpeedRatio;
-        main.startLifetime = GetComponent<EnlargeAndFade>().rippleAliveTime;
+        main.startLifetime = GetComponent<EnlargeAndFade>().rippleLifetime;
 
         var emission = ps.emission;
         emission.enabled = true;
@@ -50,6 +57,19 @@ public class ControlColliderAndParticles : MonoBehaviour
         ps.Play();
     }
 
+
+    public void SetStrength(float holdTime)
+    {
+        float maxHoldtime = 2f;
+        float scaleModifier = Mathf.Lerp(minScale, maxScale, holdTime / maxHoldtime);
+        float rippleLifetime = Mathf.Lerp(minLifeTime, maxLifeTime, holdTime / maxHoldtime);
+        rippleEffectiveRadius = Mathf.Lerp(minRadius, maxRadius, holdTime / maxHoldtime);
+        GetComponent<EnlargeAndFade>().scaleModifier = scaleModifier;
+        GetComponent<EnlargeAndFade>().rippleLifetime = rippleLifetime;
+        Debug.Log(scaleModifier + " scale");
+        Debug.Log(rippleLifetime + " lifetime");
+
+    }
 
 
     // Update is called once per frame

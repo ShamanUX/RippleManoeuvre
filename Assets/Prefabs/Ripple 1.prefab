@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e299063b6d0c6084f848bd495fe4ac14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  scaleModifier: 4
-  rippleAliveTime: 3
+  scaleModifier: 6
+  rippleLifetime: 1
 --- !u!114 &3910578575274460420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,6 +64,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   rippleEffectiveRadius: 2
   rippleBurstInterval: 0.2
+  minLifeTime: 0.66
+  maxLifeTime: 2
+  minScale: 2.22
+  maxScale: 8
+  minRadius: 0.5
+  maxRadius: 2
 --- !u!1 &1936563239562019826
 GameObject:
   m_ObjectHideFlags: 0

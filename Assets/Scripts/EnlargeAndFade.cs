@@ -1,7 +1,14 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnlargeAndFade : MonoBehaviour
 {
+
+    public float scaleModifier = 0.5f;
+    public float rippleAliveTime = 1f;
+    private float elapsedTime = 0f;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -12,20 +19,33 @@ public class EnlargeAndFade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ShrinkRipple();
         FadeOut();
+        elapsedTime += Time.deltaTime;
+        if (elapsedTime <= rippleAliveTime)
+        {
+            EnlargeRipple();
+        }
+        else
+        {
+            Debug.Log("EndEnlarge");
+            GetComponent<ControlColliderAndParticles>().BeginShrinkEffectiveRadius();
+        }
     }
 
     void FadeOut()
     {
-        Material material = gameObject.GetComponentInChildren<MeshRenderer>().material;
+        Material material = transform.Find("ForceSphere").GetComponent<MeshRenderer>().material;
         Color lastColor = material.GetColor("_BaseColor");
-        material.SetColor("_BaseColor", new Color(lastColor.r, lastColor.g, lastColor.b, lastColor.a - Time.deltaTime / 3));
+        float alpha = Mathf.Lerp(1, 0, elapsedTime / rippleAliveTime);
+
+        material.SetColor("_BaseColor", new Color(lastColor.r, lastColor.g, lastColor.b, alpha));
+
     }
 
-    void ShrinkRipple()
+    void EnlargeRipple()
     {
-        gameObject.transform.localScale *= 1 + Time.deltaTime / 1.25f;
+        // gameObject.transform.localScale *= 1 + Time.deltaTime * scaleModifier;
+        gameObject.transform.localScale += Vector3.one * (Time.deltaTime * scaleModifier);
 
     }
 }

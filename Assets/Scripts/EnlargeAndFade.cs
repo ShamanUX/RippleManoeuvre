@@ -9,6 +9,7 @@ public class EnlargeAndFade : MonoBehaviour
     public float rippleAliveTime = 1f;
     private float elapsedTime = 0f;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,9 +19,17 @@ public class EnlargeAndFade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        EnlargeRipple();
         FadeOut();
         elapsedTime += Time.deltaTime;
+        if (elapsedTime <= rippleAliveTime)
+        {
+            EnlargeRipple();
+        }
+        else
+        {
+            Debug.Log("EndEnlarge");
+            GetComponent<ControlColliderAndParticles>().BeginShrinkEffectiveRadius();
+        }
     }
 
     void FadeOut()
@@ -30,10 +39,7 @@ public class EnlargeAndFade : MonoBehaviour
         float alpha = Mathf.Lerp(1, 0, elapsedTime / rippleAliveTime);
 
         material.SetColor("_BaseColor", new Color(lastColor.r, lastColor.g, lastColor.b, alpha));
-        if (alpha <= 0)
-        {
-            Destroy(gameObject);
-        }
+
     }
 
     void EnlargeRipple()

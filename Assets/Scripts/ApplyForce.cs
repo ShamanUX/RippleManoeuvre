@@ -16,12 +16,12 @@ public class ApplyForce : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rippleEffectiveRadius = GetComponentInParent<ControlColliderAndParticles>().rippleEffectiveRadius;
     }
 
     // Update is called once per frame
     void Update()
     {
+        rippleEffectiveRadius = GetComponentInParent<ControlColliderAndParticles>().rippleEffectiveRadius;
 
     }
 
@@ -47,7 +47,7 @@ public class ApplyForce : MonoBehaviour
             // 
             if (other.TryGetComponent<Rigidbody>(out var otherRigidbody))
             {
-                if (parentRadius - distance < rippleEffectiveRadius)
+                if (parentRadius - distance < rippleEffectiveRadius + .5)
                 {
                     otherRigidbody.AddForce(new Vector3(forceDirection.x, forceDirection.y, 0) * 2, ForceMode.Force);
                     other.GetComponent<ChangeColor>().ChangeToRed();

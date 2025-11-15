@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   scaleModifier: 4
-  rippleAliveTime: 2
+  rippleAliveTime: 3
 --- !u!114 &3910578575274460420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,8 +62,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 224217e624509cf4390badc93cd046c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  scaleToLastRippleBurstSpawnTimeRatio: 0.2
   rippleEffectiveRadius: 2
+  rippleBurstInterval: 0.2
 --- !u!1 &1936563239562019826
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,7 +75,6 @@ GameObject:
   - component: {fileID: 2107551698864031159}
   - component: {fileID: 1046314102203965456}
   - component: {fileID: 53810609811616683}
-  - component: {fileID: 5647280414883875750}
   - component: {fileID: 1203197677717256497}
   m_Layer: 0
   m_Name: DeadZoneSphere
@@ -114,7 +113,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1936563239562019826}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -155,27 +154,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &5647280414883875750
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1936563239562019826}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: -0.000000029802322, y: 0, z: 0}
 --- !u!114 &1203197677717256497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,7 +217,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7021802108492437021}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

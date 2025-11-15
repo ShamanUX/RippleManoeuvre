@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 class Wall : MonoBehaviour
 {
@@ -22,18 +23,41 @@ class Wall : MonoBehaviour
             case WallType.Right:
                 // Mirror X velocity
                 newVelocity.x = -currentVelocity.x * bounceMultiplier;
-
                 break;
 
             case WallType.Top:
-            case WallType.Bottom:
                 // Mirror Y velocity  
                 newVelocity.y = -currentVelocity.y * bounceMultiplier;
+                break;
+
+            case WallType.Bottom:
+                // Player falls off the level
+                if (other.tag == "Player") {
+                    FallOff();
+                }
 
                 break;
         }
 
         rb.velocity = newVelocity;
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        // Terrible implementation of enemy despawning but hey it works
+        if (other.tag == "SpawnedEnemy")
+        {
+            other.tag = "Enemy";
+        } else if (other.tag == "Enemy")
+        {
+            Destroy(other.gameObject);
+        }
+    }
+
+    void FallOff()
+    {
+        // Game over handling upon falling off the level
+        GameManager.Instance.GameOver();
     }
 }
 

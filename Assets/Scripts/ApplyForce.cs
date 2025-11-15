@@ -1,4 +1,5 @@
 using System;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,10 +11,12 @@ public class ApplyForce : MonoBehaviour
     private bool isAffectingPlayer;
 
     private bool initialForceSet = false;
+
+    private float rippleEffectiveRadius;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        rippleEffectiveRadius = GetComponentInParent<ControlColliderAndParticles>().rippleEffectiveRadius;
     }
 
     // Update is called once per frame
@@ -44,7 +47,7 @@ public class ApplyForce : MonoBehaviour
             // 
             if (other.TryGetComponent<Rigidbody>(out var otherRigidbody))
             {
-                if (parentRadius - distance < 2)
+                if (parentRadius - distance < rippleEffectiveRadius)
                 {
                     otherRigidbody.AddForce(new Vector3(forceDirection.x, forceDirection.y, 0) * 2, ForceMode.Force);
                     other.GetComponent<ChangeColor>().ChangeToRed();

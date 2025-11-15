@@ -25,7 +25,7 @@ public class EnlargeAndFade : MonoBehaviour
 
     void FadeOut()
     {
-        Material material = gameObject.GetComponentInChildren<MeshRenderer>().material;
+        Material material = transform.Find("ForceSphere").GetComponent<MeshRenderer>().material;
         Color lastColor = material.GetColor("_BaseColor");
         float alpha = Mathf.Lerp(1, 0, elapsedTime / rippleAliveTime);
 

@@ -23,16 +23,8 @@ public class TouchEventListener : MonoBehaviour
             Vector3 mousePos = Mouse.current.position.ReadValue();
             mousePos.z = Camera.main.nearClipPlane;
             Vector3 Worldpos = Camera.main.ScreenToWorldPoint(mousePos);
-            Debug.Log(Worldpos);
             GameObject newRipple = GameObject.Instantiate(ripple);
             newRipple.transform.position = new Vector3(Worldpos.x, Worldpos.y, 0);
-
-
         }
-    }
-
-    void OnMouseDown()
-    {
-        Debug.Log("MouseDown");
     }
 }

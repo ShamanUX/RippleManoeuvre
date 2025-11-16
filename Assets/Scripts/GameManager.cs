@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     {
         if (_elapsedTime >= SpawnCooldown)
         {
-            int spawnID = Random.Range(0, EnemyFormations.Count - 1);
+            int spawnID = Random.Range(0, EnemyFormations.Count);
             GameObject.Instantiate(EnemyFormations[spawnID]);
             _elapsedTime = 0;
         } else

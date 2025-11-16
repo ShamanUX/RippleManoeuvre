@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5656757642633478452}
+  - component: {fileID: 5189655064993416970}
   m_Layer: 0
   m_Name: EnemyFormationThreeCubesTopDown
   m_TagString: Enemy
@@ -34,6 +35,18 @@ Transform:
   - {fileID: 4897254808998002565}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5189655064993416970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3792879711603438872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 742f53403a5742a4bb3c3305dd37c5f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyEnemy
 --- !u!1001 &1367005225355566212
 PrefabInstance:
   m_ObjectHideFlags: 0

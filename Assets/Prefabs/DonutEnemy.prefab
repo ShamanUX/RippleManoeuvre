@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2700476010768682313}
   - component: {fileID: 3089366001537691328}
   - component: {fileID: 7744255639045777882}
+  - component: {fileID: 5844526810505833530}
   m_Layer: 0
   m_Name: DonutEnemy
   m_TagString: Enemy
@@ -64,6 +65,18 @@ MonoBehaviour:
   MoveSpeedX: 1
   MoveSpeedY: 1
   MoveSpeedZ: 0
+--- !u!114 &5844526810505833530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5838702056105109689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 742f53403a5742a4bb3c3305dd37c5f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyEnemy
 --- !u!1001 &2000508404962266457
 PrefabInstance:
   m_ObjectHideFlags: 0

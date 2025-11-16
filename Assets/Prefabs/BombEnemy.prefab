@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5994067345721738527}
   - component: {fileID: 7992102361456186672}
   - component: {fileID: 2352897380368178026}
+  - component: {fileID: 356455949828857359}
   m_Layer: 0
   m_Name: BombEnemy
   m_TagString: Enemy
@@ -64,6 +65,18 @@ MonoBehaviour:
   MoveSpeedX: 0
   MoveSpeedY: 2
   MoveSpeedZ: 0
+--- !u!114 &356455949828857359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2429539354616342303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 742f53403a5742a4bb3c3305dd37c5f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyEnemy
 --- !u!1001 &6769311234882845182
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,6 +9,9 @@ public class GameManager : MonoBehaviour
 
     // Easy global reference to the player. I.E. GameManager.Player
     public GameObject Player;
+    public List<GameObject> EnemyFormations;
+    public float SpawnCooldown;
+    private float _elapsedTime;
 
     void Awake()
     {
@@ -28,7 +33,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (_elapsedTime >= SpawnCooldown)
+        {
+            int spawnID = Random.Range(0, EnemyFormations.Count - 1);
+            GameObject.Instantiate(EnemyFormations[spawnID]);
+            _elapsedTime = 0;
+        } else
+        {
+            _elapsedTime += Time.deltaTime;
+        }
     }
 
     public void GameOver()

@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 480632463}
   - component: {fileID: 480632462}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,6 +149,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   Player: {fileID: 1171305897}
+  EnemyFormations:
+  - {fileID: 3792879711603438872, guid: 45ae85a8e2af4034bb77ec43cd7180d9, type: 3}
+  SpawnCooldown: 10
 --- !u!4 &480632463
 Transform:
   m_ObjectHideFlags: 0

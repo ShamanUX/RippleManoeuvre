@@ -42,18 +42,6 @@ class Wall : MonoBehaviour
         rb.velocity = newVelocity;
     }
 
-    void OnTriggerExit(Collider other)
-    {
-        // Terrible implementation of enemy despawning but hey it works
-        if (other.tag == "SpawnedEnemy")
-        {
-            other.tag = "Enemy";
-        } else if (other.tag == "Enemy")
-        {
-            Destroy(other.gameObject);
-        }
-    }
-
     void FallOff()
     {
         // Game over handling upon falling off the level

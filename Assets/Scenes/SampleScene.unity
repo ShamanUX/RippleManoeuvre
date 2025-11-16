@@ -1108,8 +1108,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RotateAxes
   RotateSpeedX: 3
-  RotateSpeedY: 3
-  RotateSpeedZ: 3
+  RotateSpeedY: 0
+  RotateSpeedZ: 0
 --- !u!4 &1265579439 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4599018172435130217, guid: 1f44d477d6b0be743886dc5476e3de69, type: 3}

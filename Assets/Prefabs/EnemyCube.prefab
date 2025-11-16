@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3671138837921723704}
   - component: {fileID: -7259483834207622876}
   - component: {fileID: -3974448106962991917}
+  - component: {fileID: -5184667071528965911}
   m_Layer: 0
   m_Name: EnemyCube
   m_TagString: Enemy
@@ -143,3 +144,15 @@ MonoBehaviour:
   MoveSpeedX: 10
   MoveSpeedY: 0
   MoveSpeedZ: 0
+--- !u!114 &-5184667071528965911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2257141709453291548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 742f53403a5742a4bb3c3305dd37c5f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyEnemy

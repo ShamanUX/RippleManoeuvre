@@ -66,8 +66,7 @@ public class ControlColliderAndParticles : MonoBehaviour
         rippleEffectiveRadius = Mathf.Lerp(minRadius, maxRadius, holdTime / maxHoldtime);
         GetComponent<EnlargeAndFade>().scaleModifier = scaleModifier;
         GetComponent<EnlargeAndFade>().rippleLifetime = rippleLifetime;
-        Debug.Log(scaleModifier + " scale");
-        Debug.Log(rippleLifetime + " lifetime");
+
 
     }
 

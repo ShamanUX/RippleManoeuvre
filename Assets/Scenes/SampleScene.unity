@@ -236,6 +236,7 @@ MonoBehaviour:
   - {fileID: 4682163438910815359, guid: d7c147e6dceca66498c64133fd3656c4, type: 3}
   - {fileID: 6089595135895585233, guid: 9d05f21842e8e68409152d57bef0b260, type: 3}
   - {fileID: 5783254020269211383, guid: 1af9873ccfca23f43a63ffabd197ce43, type: 3}
+  - {fileID: 8466516201463103209, guid: dd55abeb10f51d74c8e4b98c1ca7a398, type: 3}
   SpawnCooldown: 7
 --- !u!4 &480632463
 Transform:
@@ -446,7 +447,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 2
-  m_Color: {r: 0.33333337, g: 0.8666667, b: 0.46157128, a: 1}
+  m_Color: {r: 0.9083557, g: 0.7673202, b: 0.38562265, a: 1}
   m_Intensity: 53.63
   m_Range: 102.17
   m_SpotAngle: 30
@@ -840,7 +841,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 2
-  m_Color: {r: 0.33333337, g: 0.8666667, b: 0.46157128, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 53.63
   m_Range: 102.17
   m_SpotAngle: 30
@@ -926,6 +927,7 @@ GameObject:
   - component: {fileID: 1171305904}
   - component: {fileID: 1171305905}
   - component: {fileID: 1171305906}
+  - component: {fileID: 1171305907}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1093,6 +1095,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21a3142ee39be7549acc553277831489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCollision
+--- !u!114 &1171305907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171305897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf993aabdc7a3044b4a1899341ce257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RotateAxes
+  RotateSpeedX: 3
+  RotateSpeedY: 3
+  RotateSpeedZ: 3
 --- !u!4 &1265579439 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4599018172435130217, guid: 1f44d477d6b0be743886dc5476e3de69, type: 3}
@@ -6373,8 +6390,8 @@ SceneRoots:
   - {fileID: 1171305902}
   - {fileID: 1643625781}
   - {fileID: 1156136483}
+  - {fileID: 635730051}
   - {fileID: 1359896431}
   - {fileID: 480632463}
   - {fileID: 2046281430}
   - {fileID: 986089627}
-  - {fileID: 635730051}

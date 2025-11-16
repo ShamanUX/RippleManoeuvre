@@ -23,12 +23,10 @@ public class EnlargeAndFade : MonoBehaviour
         elapsedTime += Time.deltaTime;
         if (elapsedTime <= rippleLifetime)
         {
-            Debug.Log("enlarge, ripple lifetime: " + rippleLifetime);
             EnlargeRipple();
         }
         else
         {
-            Debug.Log("EndEnlarge");
             GetComponent<ControlColliderAndParticles>().BeginShrinkEffectiveRadius();
         }
     }

@@ -9,11 +9,13 @@ public class TouchEventListener : MonoBehaviour
     private GameObject windUpParticlesInstance;
     private float holdTime;
 
+    private SoundManager soundManager;
+
     private Vector3 ripplePosition;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        soundManager = FindFirstObjectByType<SoundManager>();
     }
 
     // Update is called once per frame
@@ -42,6 +44,8 @@ public class TouchEventListener : MonoBehaviour
             GameObject newRipple = GameObject.Instantiate(ripple);
             newRipple.transform.position = ripplePosition;
             newRipple.GetComponent<ControlColliderAndParticles>().SetStrength(holdTime);
+            soundManager.PlayRippleSound(holdTime);
+
         }
     }
 }

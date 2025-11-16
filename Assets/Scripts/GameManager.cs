@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
 
+        _elapsedTime = SpawnCooldown;
+
         Player = GameObject.FindGameObjectWithTag("Player");
     }
 

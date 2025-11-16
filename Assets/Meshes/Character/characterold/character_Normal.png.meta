@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 834b81c69e7f5d24394cc616a5858cb5
+guid: a4860f0b7f43d3f4b842bea32192449f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4682510359478000180
-    second: donut-normal_0
+      213: -4755207113394012997
+    second: character_Normal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -23,7 +23,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-    flipGreenChannel: 1
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: donut-normal_0
+      name: character_Normal_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1024
-        height: 1024
+        width: 2048
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cc52a3613a1640fb0800000000000000
-      internalID: -4682510359478000180
+      spriteID: bbc3db4135c120eb0800000000000000
+      internalID: -4755207113394012997
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      donut-normal_0: -4682510359478000180
+      character_Normal_0: -4755207113394012997
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

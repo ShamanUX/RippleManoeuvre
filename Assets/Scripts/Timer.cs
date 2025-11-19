@@ -10,6 +10,6 @@ public class Timer : MonoBehaviour
     void Update()
     {
         _timer += Time.deltaTime;
-        TimeDisplay.text = "Time: " + ((int)_timer).ToString();
+        TimeDisplay.text = "TIME: " + ((int)_timer).ToString();
     }
 }

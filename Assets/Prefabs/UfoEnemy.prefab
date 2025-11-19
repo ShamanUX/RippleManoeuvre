@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7867503248029614379}
   - component: {fileID: 8142296091868685984}
   - component: {fileID: 8733153186414502489}
-  - component: {fileID: 845938129092385686}
   m_Layer: 0
   m_Name: UfoEnemy
   m_TagString: Enemy
@@ -65,18 +64,6 @@ MonoBehaviour:
   MoveSpeedX: 0
   MoveSpeedY: 1
   MoveSpeedZ: 0
---- !u!114 &845938129092385686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6089595135895585233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 742f53403a5742a4bb3c3305dd37c5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DestroyEnemy
 --- !u!1001 &1792206665563537195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -119,23 +106,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1135724287504948497, guid: 98334c7694a4f47449ba14ed5deeed6e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7660445
+      value: -0.6427876
       objectReference: {fileID: 0}
     - target: {fileID: 1135724287504948497, guid: 98334c7694a4f47449ba14ed5deeed6e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.6427876
+      value: 0.7660445
       objectReference: {fileID: 0}
     - target: {fileID: 1135724287504948497, guid: 98334c7694a4f47449ba14ed5deeed6e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1135724287504948497, guid: 98334c7694a4f47449ba14ed5deeed6e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1135724287504948497, guid: 98334c7694a4f47449ba14ed5deeed6e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 80
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 1135724287504948497, guid: 98334c7694a4f47449ba14ed5deeed6e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -156,6 +143,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 326853557916813227, guid: 98334c7694a4f47449ba14ed5deeed6e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1954543766801120225}
+    - targetCorrespondingSourceObject: {fileID: 326853557916813227, guid: 98334c7694a4f47449ba14ed5deeed6e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 793402596359684452}
   m_SourcePrefab: {fileID: 100100000, guid: 98334c7694a4f47449ba14ed5deeed6e, type: 3}
 --- !u!4 &1665721974061818426 stripped
 Transform:
@@ -189,3 +179,15 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 5db8e82e7287cd74ebb5092e15ba6a17, type: 3}
+--- !u!114 &793402596359684452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041825956866570368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 742f53403a5742a4bb3c3305dd37c5f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyEnemy

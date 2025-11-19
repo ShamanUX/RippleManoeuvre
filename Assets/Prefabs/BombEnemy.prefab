@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5994067345721738527}
   - component: {fileID: 7992102361456186672}
   - component: {fileID: 2352897380368178026}
-  - component: {fileID: 356455949828857359}
+  - component: {fileID: 2920835481404696731}
   m_Layer: 0
   m_Name: BombEnemy
   m_TagString: Enemy
@@ -28,9 +28,9 @@ Transform:
   m_GameObject: {fileID: 2429539354616342303}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 7.36, y: 0, z: 0}
+  m_LocalScale: {x: 0.66, y: 0.66, z: 0.66}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6520039968838901269}
   m_Father: {fileID: 0}
@@ -65,7 +65,7 @@ MonoBehaviour:
   MoveSpeedX: 0
   MoveSpeedY: 2
   MoveSpeedZ: 0
---- !u!114 &356455949828857359
+--- !u!114 &2920835481404696731
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

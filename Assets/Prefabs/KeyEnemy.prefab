@@ -9,10 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5538507913240764382}
-  - component: {fileID: -4374851599011421005}
   m_Layer: 0
   m_Name: KeyEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,18 +32,6 @@ Transform:
   - {fileID: 5538654451138808028}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-4374851599011421005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7182021178637534520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 742f53403a5742a4bb3c3305dd37c5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DestroyEnemy
 --- !u!1001 &5429082331400810295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -134,6 +121,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 55b515003300a40499c3c961d168108a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2388320405227376923}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 55b515003300a40499c3c961d168108a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8878424454252099698}
   m_SourcePrefab: {fileID: 100100000, guid: 55b515003300a40499c3c961d168108a, type: 3}
 --- !u!1 &5158469080624370278 stripped
 GameObject:
@@ -189,9 +179,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dfe458009907434a885cdd696dd6c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveObject
-  MoveSpeedX: 3
-  MoveSpeedY: -2
+  MoveSpeedX: 2
+  MoveSpeedY: -1
   MoveSpeedZ: 0
+--- !u!114 &8878424454252099698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5158469080624370278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 742f53403a5742a4bb3c3305dd37c5f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyEnemy
 --- !u!4 &5538654451138808028 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 55b515003300a40499c3c961d168108a, type: 3}

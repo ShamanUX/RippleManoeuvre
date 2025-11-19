@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1471488328802804639}
   - component: {fileID: 2044964871089406802}
   - component: {fileID: 7311854715553499764}
-  - component: {fileID: 295031117683474561}
+  - component: {fileID: 5888726024555461032}
   m_Layer: 0
   m_Name: BalloonDogEnemy
   m_TagString: Enemy
@@ -65,7 +65,7 @@ MonoBehaviour:
   MoveSpeedX: -2
   MoveSpeedY: 0
   MoveSpeedZ: 0
---- !u!114 &295031117683474561
+--- !u!114 &5888726024555461032
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,6 +144,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e19cd3576cff37a459cb7c5794aa1d36, type: 3}
       propertyPath: m_Name
       value: balloondog
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e19cd3576cff37a459cb7c5794aa1d36, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

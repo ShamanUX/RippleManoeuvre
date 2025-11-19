@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class DestroyEnemy : MonoBehaviour
@@ -7,7 +8,7 @@ public class DestroyEnemy : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, Vector3.zero) > 20)
         {
-            GameObject.Destroy(this.gameObject);
+            GameObject.Destroy(transform.parent.gameObject);
         }
     }
 }

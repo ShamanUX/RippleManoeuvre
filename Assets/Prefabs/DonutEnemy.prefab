@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2700476010768682313}
   - component: {fileID: 3089366001537691328}
   - component: {fileID: 7744255639045777882}
-  - component: {fileID: 5844526810505833530}
+  - component: {fileID: 7191407805390516982}
   m_Layer: 0
   m_Name: DonutEnemy
   m_TagString: Enemy
@@ -62,10 +62,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dfe458009907434a885cdd696dd6c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveObject
-  MoveSpeedX: 1
+  MoveSpeedX: 2
   MoveSpeedY: 1
   MoveSpeedZ: 0
---- !u!114 &5844526810505833530
+--- !u!114 &7191407805390516982
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

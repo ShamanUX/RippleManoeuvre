@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6829065260249316705}
-  - component: {fileID: -1237993632441524389}
   m_Layer: 0
   m_Name: EnemyFormationTwoDogsRightLeft
   m_TagString: Enemy
@@ -26,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 3935661237806526893}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.74234, y: 0.66141, z: 0}
+  m_LocalPosition: {x: 9.07, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -34,18 +33,6 @@ Transform:
   - {fileID: 1145988675161700807}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-1237993632441524389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3935661237806526893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 742f53403a5742a4bb3c3305dd37c5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DestroyEnemy
 --- !u!1001 &1985129169994816088
 PrefabInstance:
   m_ObjectHideFlags: 0

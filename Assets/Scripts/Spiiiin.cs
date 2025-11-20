@@ -9,7 +9,9 @@ public class Spiiiin : MonoBehaviour
     {
         if (target == null) return;
 		
-        transform.RotateAround(target.position, Vector3.up, orbitSpeed * Time.deltaTime);
+		Vector3 northWest = Vector3.down + Vector3.left;
+		
+        transform.RotateAround(target.position, northWest, orbitSpeed * Time.deltaTime);
 		
     }
 }

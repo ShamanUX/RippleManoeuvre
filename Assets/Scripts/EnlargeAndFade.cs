@@ -35,7 +35,7 @@ public class EnlargeAndFade : MonoBehaviour
     {
         Material material = transform.Find("ForceSphere").GetComponent<MeshRenderer>().material;
         Color lastColor = material.GetColor("_BaseColor");
-        float alpha = Mathf.Lerp(1, 0, elapsedTime / rippleLifetime);
+        float alpha = Mathf.Lerp(1, 0.3f, elapsedTime / rippleLifetime);
 
         material.SetColor("_BaseColor", new Color(lastColor.r, lastColor.g, lastColor.b, alpha));
 

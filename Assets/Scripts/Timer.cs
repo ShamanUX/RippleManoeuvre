@@ -18,4 +18,9 @@ public class Timer : MonoBehaviour
             Star.gameObject.SetActive(true);
         }
     }
+
+    public float GetTime()
+    {
+        return _timer;
+    }
 }

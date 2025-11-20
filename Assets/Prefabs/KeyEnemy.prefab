@@ -165,8 +165,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RotateAxes
   RotateSpeedX: 0
-  RotateSpeedY: 90
-  RotateSpeedZ: 45
+  RotateSpeedY: 45
+  RotateSpeedZ: 25
 --- !u!114 &2388320405227376923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dfe458009907434a885cdd696dd6c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveObject
-  MoveSpeedX: 2
+  MoveSpeedX: 1.2
   MoveSpeedY: -1
   MoveSpeedZ: 0
 --- !u!114 &8878424454252099698

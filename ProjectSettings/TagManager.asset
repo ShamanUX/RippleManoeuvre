@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Boundary
+  - Sounds
   layers:
   - Default
   - TransparentFX

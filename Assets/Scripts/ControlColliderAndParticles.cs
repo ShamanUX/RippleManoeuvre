@@ -35,6 +35,7 @@ public class ControlColliderAndParticles : MonoBehaviour
         var main = ps.main;
         main.startSpeed = rippleScaleModifier / scaleToSpeedRatio;
         main.startLifetime = GetComponent<EnlargeAndFade>().rippleLifetime;
+        Debug.Log("start lifetime: " + main.startLifetime.constant);
 
         var emission = ps.emission;
         emission.enabled = true;
@@ -83,7 +84,7 @@ public class ControlColliderAndParticles : MonoBehaviour
                 if (!isDestroying)
                 {
                     isDestroying = true;
-                    Invoke(nameof(DestroyRipple), 0.5f);
+                    Invoke(nameof(DestroyRipple), 0.2f);
                 }
 
             }

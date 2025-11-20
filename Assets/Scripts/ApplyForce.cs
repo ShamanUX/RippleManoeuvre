@@ -37,11 +37,29 @@ public class ApplyForce : MonoBehaviour
         return isAffectingPlayer;
     }
 
+    void ApplyLimitedTorque(Vector3 torque, Rigidbody rb)
+    {
+
+        const float torqueMultiplier = 10f;
+        const float maxTorque = 15f;
+        // Apply multiplier
+        Vector3 scaledTorque = torque * torqueMultiplier;
+
+        // Clamp the torque magnitude
+        if (scaledTorque.magnitude > maxTorque)
+        {
+            scaledTorque = scaledTorque.normalized * maxTorque;
+        }
+
+        rb.AddTorque(scaledTorque, ForceMode.Force);
+    }
+
     void OnTriggerStay(Collider other)
     {
+        Vector3 yHandicapOffset = 0 * Vector3.up;
         if (other.CompareTag("Player"))
         {
-            Vector3 forceDirection = (other.transform.position - transform.position).normalized;
+            Vector3 forceDirection = (other.transform.position - transform.position + yHandicapOffset).normalized;
             float distance = Vector3.Distance(other.transform.position, transform.position);
             float parentRadius = transform.parent.localScale.x / 2;
 
@@ -54,6 +72,7 @@ public class ApplyForce : MonoBehaviour
                     otherRigidbody.AddForce(new Vector3(forceDirection.x, forceDirection.y, 0) * constantForceMultiplier, ForceMode.Force);
                     other.GetComponent<ChangeColor>().ChangeToRed();
                     isAffectingPlayer = true;
+
                 }
                 else
                 {
@@ -92,6 +111,7 @@ public class ApplyForce : MonoBehaviour
             Rigidbody otherRigidbody = other.GetComponent<Rigidbody>();
             if (otherRigidbody != null)
             {
+                ApplyLimitedTorque(new Vector3(forceDirection.x, forceDirection.y, forceDirection.x * forceDirection.y), otherRigidbody);
                 otherRigidbody.AddForce(new Vector3(forceDirection.x, forceDirection.y, 0) * impactForceMultiplier, ForceMode.Impulse);
             }
         }

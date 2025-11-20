@@ -62,12 +62,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 224217e624509cf4390badc93cd046c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  rippleEffectiveRadius: 2
+  rippleEffectiveRadius: 1.5
   rippleBurstInterval: 0.2
   minLifeTime: 0.66
   maxLifeTime: 2
   minScale: 2.22
-  maxScale: 8
+  maxScale: 10
   minRadius: 0.5
   maxRadius: 2
 --- !u!1 &1936563239562019826

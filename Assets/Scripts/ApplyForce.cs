@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(ChangeColor))]
 public class ApplyForce : MonoBehaviour
 {
+    public float constantForceMultiplier = 1.5f;
+    public float impactForceMultiplier = 1.5f;
 
     private bool isAffectingPlayer;
 
@@ -49,7 +51,7 @@ public class ApplyForce : MonoBehaviour
             {
                 if (parentRadius - distance < rippleEffectiveRadius + .5)
                 {
-                    otherRigidbody.AddForce(new Vector3(forceDirection.x, forceDirection.y, 0) * 2, ForceMode.Force);
+                    otherRigidbody.AddForce(new Vector3(forceDirection.x, forceDirection.y, 0) * constantForceMultiplier, ForceMode.Force);
                     other.GetComponent<ChangeColor>().ChangeToRed();
                     isAffectingPlayer = true;
                 }
@@ -80,7 +82,6 @@ public class ApplyForce : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        int forceMagnitude = 2;
         if (other.CompareTag("Player") && !initialForceSet)
         {
             initialForceSet = true;
@@ -91,7 +92,7 @@ public class ApplyForce : MonoBehaviour
             Rigidbody otherRigidbody = other.GetComponent<Rigidbody>();
             if (otherRigidbody != null)
             {
-                otherRigidbody.AddForce(new Vector3(forceDirection.x, forceDirection.y, 0) * forceMagnitude, ForceMode.Impulse);
+                otherRigidbody.AddForce(new Vector3(forceDirection.x, forceDirection.y, 0) * impactForceMultiplier, ForceMode.Impulse);
             }
         }
     }

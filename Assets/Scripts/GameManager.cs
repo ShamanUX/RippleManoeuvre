@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -40,9 +41,15 @@ public class GameManager : MonoBehaviour
             int spawnID = Random.Range(0, EnemyFormations.Count);
             GameObject.Instantiate(EnemyFormations[spawnID]);
             _elapsedTime = 0;
-        } else
+        }
+        else
         {
             _elapsedTime += Time.deltaTime;
+        }
+
+        if (Keyboard.current[Key.Escape].wasPressedThisFrame)
+        {
+            //Application.Quit();
         }
     }
 
@@ -52,3 +59,4 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
+    
